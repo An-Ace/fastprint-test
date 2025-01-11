@@ -44,6 +44,7 @@ python manage.py runserver
 
 ### Fitur
 - CRUD Produk
+- Validasi Form: "inputan nama harus diisi, dan harga harus berupa inputan angka".
 
 ## Tabel
 ### Produk
