@@ -1,0 +1,17 @@
+name: fastprint-test
+services:
+  postgres:
+    container_name: fastprint-postgres
+    image: postgres:alpine
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: fastprint
+    volumes:
+      - fastprint_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  fastprint_postgres_data:
+    driver: local

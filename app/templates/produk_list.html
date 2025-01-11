@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Produk</title>
+</head>
+<body>
+    <h1>Daftar Produk</h1>
+    <a href="{% url 'produk_create' %}">Tambah Produk</a>
+    <a href="{% url 'produk_bisa_dijual' %}">Filter: Bisa Dijual</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Kategori</th>
+                <th>Status</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in produk %}
+            <tr>
+                <td>{{ item.id_produk }}</td>
+                <td>{{ item.nama_produk }}</td>
+                <td>{{ item.harga }}</td>
+                <td>{{ item.kategori.nama_kategori }}</td>
+                <td>{{ item.status.nama_status }}</td>
+                <td>
+                    <a href="{% url 'produk_update' item.id_produk %}">Edit</a>
+                    <!-- <form action="{% url 'produk_delete' item.id_produk %}" method="POST" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit">Hapus</button>
+                    </form> -->
+                    <a href="{% url 'produk_delete' item.id_produk %}">Hapus</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

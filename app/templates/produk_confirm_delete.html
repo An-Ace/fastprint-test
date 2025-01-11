@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hapus Produk</title>
+</head>
+<body>
+    <h1>Hapus Produk</h1>
+    <p>Apakah Anda yakin ingin menghapus produk "{{ produk.nama_produk }}"?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Ya</button>
+    </form>
+    <a href="{% url 'produk_list' %}">Batal</a>
+</body>
+</html>

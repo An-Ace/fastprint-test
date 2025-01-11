@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Produk</title>
+</head>
+<body>
+    <h1>Form Produk</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Simpan</button>
+    </form>
+    <a href="{% url 'produk_list' %}">Kembali</a>
+</body>
+</html>
