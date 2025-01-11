@@ -47,17 +47,11 @@ python manage.py runserver
 
 ## Tabel
 ### Produk
----
-id_produk | nama_produk | harga | kategori_id | status_id
----
+| id_produk | nama_produk | harga | kategori_id | status_id |
 ### Kategori
----
-id_kategori | nama_kategori
----
+| id_kategori | nama_kategori |
 ### Status
----
-id_status | nama_status
----
+| id_status | nama_status |
 
 # Gambaran/Dokumentasi:
 ### Halaman Utama
